@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/usr/local/Cellar/gcc/13.1.0/bin",
+                "${workspaceFolder}/**",
+                "/usr/local/Cellar/gcc/13.1.0/include/c++/13/x86_64-apple-darwin21",
+                "/usr/local/Cellar/gcc/13.1.0/include/c++/13"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/local/Cellar/gcc/13.1.0/bin/g++-13",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
