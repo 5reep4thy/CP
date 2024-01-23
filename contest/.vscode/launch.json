@@ -6,7 +6,7 @@
     "configurations": [
 
         {
-            "name": "g++13 - Build and debug active file",
+            "name": "clang++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
@@ -16,7 +16,7 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "lldb",
-            "preLaunchTask": "C/C++: g++-13 build active file"
+            "preLaunchTask": "C/C++: clang++ build active file"
         }
     ]
 }

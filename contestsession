@@ -13,7 +13,7 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +33 a.cpp
+badd +1 a.cpp
 badd +1 input.txt
 badd +1 ./
 argglobal
@@ -36,8 +36,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 144 + 86) / 172)
-exe 'vert 2resize ' . ((&columns * 27 + 86) / 172)
+exe 'vert 1resize ' . ((&columns * 236 + 140) / 281)
+exe 'vert 2resize ' . ((&columns * 44 + 140) / 281)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -49,7 +49,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 33 - ((25 * winheight(0) + 22) / 45)
+let s:l = 33 - ((32 * winheight(0) + 37) / 74)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -72,15 +72,15 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 3 - ((2 * winheight(0) + 22) / 45)
+let s:l = 3 - ((2 * winheight(0) + 37) / 74)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 3
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 144 + 86) / 172)
-exe 'vert 2resize ' . ((&columns * 27 + 86) / 172)
+exe 'vert 1resize ' . ((&columns * 236 + 140) / 281)
+exe 'vert 2resize ' . ((&columns * 44 + 140) / 281)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

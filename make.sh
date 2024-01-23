@@ -10,6 +10,8 @@ cp template.cpp ./contest/c.cpp
 cp template.cpp ./contest/d.cpp
 cp template.cpp ./contest/e.cpp
 cp input.txt ./contest/input.txt
+cp local_helper.cpp ./contest/local_helper.cpp
 cp template.cpp ./contest/template.cpp
 cp output.txt ./contest/output.txt
 cp contestsession ./contest/contestsession
+cp compile_flags.txt ./contest/compile_flags.txt

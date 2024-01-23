@@ -6,7 +6,7 @@
         "type": "shell",
         "command": "",
         "args": [
-          "/usr/local/Cellar/gcc/13.1.0/bin/g++-13",
+          "/usr/bin/clang++",
           "-g",
           "${relativeFile}",
           "-o",
@@ -45,8 +45,8 @@
       },
       {
         "type": "cppbuild",
-        "label": "C/C++: g++-13 build active file",
-        "command": "/usr/local/Cellar/gcc/13.1.0/bin/g++-13",
+        "label": "C/C++: clang++ build active file",
+        "command": "/usr/bin/clang++",
         "args": [
           "-fdiagnostics-color=always",
           "-g",
@@ -61,7 +61,7 @@
           "$gcc"
         ],
         "group": "build",
-        "detail": "compiler: /usr/local/Cellar/gcc/13.1.0/bin/g++-13"
+        "detail": "compiler: /usr/bin/clang++"
       },
       {
         "label": "New workspace contents",
