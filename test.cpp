@@ -1,36 +1,29 @@
 #include<bits/stdc++.h>
 //#include<chrono>
 using namespace std;
-
-void __print(int x) {cerr << x;}
-void __print(long x) {cerr << x;}
-void __print(long long x) {cerr << x;}
-void __print(unsigned x) {cerr << x;}
-void __print(unsigned long x) {cerr << x;}
-void __print(unsigned long long x) {cerr << x;}
-void __print(float x) {cerr << x;}
-void __print(double x) {cerr << x;}
-void __print(long double x) {cerr << x;}
-void __print(char x) {cerr << '\'' << x << '\'';}
-void __print(const char *x) {cerr << '\"' << x << '\"';}
-void __print(const string &x) {cerr << '\"' << x << '\"';}
-void __print(bool x) {cerr << (x ? "true" : "false");}
-
-template<typename T, typename V>
-void __print(const pair<T, V> &x) {cerr << '{'; __print(x.first); cerr << ", "; __print(x.second); cerr << '}';}
-template<typename T>
-void __print(const T &x) {int f = 0; cerr << '{'; for (auto &i: x) cerr << (f++ ? ", " : ""), __print(i); cerr << "}";}
-void _print() {cerr << "]\n";}
-template <typename T, typename... V>
-void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
 #ifndef ONLINE_JUDGE
+#include "local_helper.cpp"
 #define debug(x...) cerr << "[" << #x << "] = ["; _print(x)
 #else
 #define debug(x...)
 #endif
 #define ll long long
+template <typename T>
+vector <T> Head(vector <T>& v, size_t top) {
+    return {
+        v.begin (),
+        next(v.begin (), min(top , v.size ()))
+    };
+}
 void solve() {
-	
+  vector <int> v = {1, 2, 3, 4, 5};
+    for (int &x : Head(v, 3)) {
+        ++x; //increasing each element by 1 
+        debug(x);
+    }
+    for (int x : v) {
+        cout << x << " ";
+    }
 }
 
 int main() {
@@ -38,11 +31,8 @@ int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	int test = 1;
-	#ifdef _DEBUG
-	freopen("input.txt", "r", stdin);
+	// freopen("input.txt", "r", stdin);
 	// freopen("output.txt", "w", stdout);
-	#endif
-	cin >> test;
 	while(test--) 
 		solve();
 	//auto stop = std::chrono::high_resolution_clock::now();

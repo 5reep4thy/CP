@@ -8,15 +8,44 @@ using namespace std;
 #define debug(x...)
 #endif
 #define ll long long
-
+vector<int> palindrome_cal(const string& s) {
+  string t;
+  t += '#';
+  for (int i = 0; i < (int) s.size(); i++) {
+    t += s[i];
+    t += '#';
+  }
+  debug(t);
+  int n = t.size();
+  vector<int> llp(n, 0);
+  int l = 0, r = 0, c = 0;
+  int i = 0;
+  while (i < n) {
+    llp[i] = min(llp[c - (i - c)], r - i);
+    int le = i - llp[i] - 1;
+    int ri = i + llp[i] + 1;
+    while (le >= 0 && ri < n) {
+      if (t[le] == t[ri]) {
+        llp[i]++;
+        le--, ri++;
+      }
+      else 
+        break;
+    }
+    if (ri > r) {
+      r = ri;
+      l = le;
+      c = i;
+    }
+    i++;
+  }
+  return llp;
+}
 void solve() {
-  ll n, m, x, y, l;
-  cin >> n >> m >> x >> y >> l;
-  ll xl = (x - 1)/l;
-  ll xr = (n - x)/l;
-  ll yl = (y - 1)/l;
-  ll yr = (m - y)/l;
-  cout << (xl + xr + 1) * (yl + yr + 1) << "\n";
+  string s = "abacabacabb";
+  /* s = "abccbd"; */
+  vector<int> pal =  palindrome_cal(s);
+  debug(pal);
 }
 
 int main() {
@@ -26,7 +55,6 @@ int main() {
 	int test = 1;
 	// freopen("input.txt", "r", stdin);
 	// freopen("output.txt", "w", stdout);
-	cin >> test;
 	while(test--) 
 		solve();
 	//auto stop = std::chrono::high_resolution_clock::now();
