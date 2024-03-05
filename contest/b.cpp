@@ -10,13 +10,7 @@ using namespace std;
 #define ll long long
 
 void solve() {
-  ll n, m, x, y, l;
-  cin >> n >> m >> x >> y >> l;
-  ll xl = (x - 1)/l;
-  ll xr = (n - x)/l;
-  ll yl = (y - 1)/l;
-  ll yr = (m - y)/l;
-  cout << (xl + xr + 1) * (yl + yr + 1) << "\n";
+
 }
 
 int main() {

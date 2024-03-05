@@ -13,17 +13,13 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +15 a.cpp
-badd +35 input.txt
+badd +1 a.cpp
+badd +1 input.txt
 badd +1 ./
-badd +22 local_helper.cpp
-badd +2 b.cpp
-badd +34 c.cpp
-badd +21 d.cpp
 argglobal
 %argdel
 $argadd ./
-edit d.cpp
+edit a.cpp
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -40,10 +36,9 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 189 + 115) / 230)
-exe 'vert 2resize ' . ((&columns * 40 + 115) / 230)
+exe 'vert 1resize ' . ((&columns * 236 + 140) / 281)
+exe 'vert 2resize ' . ((&columns * 44 + 140) / 281)
 argglobal
-balt c.cpp
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -54,12 +49,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 21 - ((20 * winheight(0) + 28) / 57)
+let s:l = 33 - ((32 * winheight(0) + 37) / 74)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 21
-normal! 015|
+keepjumps 33
+normal! 0
 wincmd w
 argglobal
 if bufexists(fnamemodify("input.txt", ":p")) | buffer input.txt | else | edit input.txt | endif
@@ -77,15 +72,15 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 2 - ((1 * winheight(0) + 28) / 57)
+let s:l = 3 - ((2 * winheight(0) + 37) / 74)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
+keepjumps 3
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 189 + 115) / 230)
-exe 'vert 2resize ' . ((&columns * 40 + 115) / 230)
+exe 'vert 1resize ' . ((&columns * 236 + 140) / 281)
+exe 'vert 2resize ' . ((&columns * 44 + 140) / 281)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -100,6 +95,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
 let g:this_session = v:this_session
 let g:this_obsession = v:this_session
 doautoall SessionLoadPost
