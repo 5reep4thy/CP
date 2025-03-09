@@ -67,20 +67,15 @@
         "label": "New workspace contents",
         "type": "shell",
         "command": "cd .. && ./make.sh",
-        "args": [
-          
-        ],
+        "args": [],
         "problemMatcher": []
       },
       {
         "label": "Clear workspace contents",
         "type": "shell",
         "command": "cd .. && ./del.sh",
-        "args": [
-          
-        ],
+        "args": [],
         "problemMatcher": []
       }
-
     ]
 }

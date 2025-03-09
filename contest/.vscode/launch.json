@@ -16,7 +16,13 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "lldb",
-            "preLaunchTask": "C/C++: clang++ build active file"
+            "preLaunchTask": "C/C++: clang++ build active file",
+            "setupCommands": [
+                {
+                    "text": "settings set target.input-path ${workspaceFolder}/input.txt"
+                }
+            ],
+            "targetArchitecture": "arm64"
         }
     ]
 }

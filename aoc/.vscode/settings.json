@@ -1,5 +1,19 @@
 {
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp",
+        "iterator": "cpp",
+        "locale": "cpp",
+        "ostream": "cpp",
+        "string": "cpp",
+        "*.ipp": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "streambuf": "cpp",
+        "syncstream": "cpp",
+        "vector": "cpp"
     }
 }

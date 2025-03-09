@@ -9,7 +9,7 @@
             "name": "clang++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "${fileDirname}/a.out",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -18,7 +18,7 @@
             "MIMode": "lldb",
             "setupCommands": [
                 {
-                    "text": "settings set target.input-path ${workspaceFolder}/milk2.in"
+                    "text": "settings set target.input-path ${workspaceFolder}/namenum.in"
                 }
             ]
         }
